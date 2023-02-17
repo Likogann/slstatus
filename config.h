@@ -66,10 +66,10 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 //	{ datetime, "%s",           "%F %T" },
-        { netspeed_rx, "%sB/s  ", "enp5s0" },
-//	{ battery_perc,"[BAT  %s]  ",  "BAT0" },
+        { netspeed_rx, "%sB/s  ",      "enp5s0" },
 	{ run_command, ": %4s | ",    "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ cpu_perc,    "[CPU  %s%%]  ", NULL	      },
-	{ ram_perc,    "[RAM  %s%%]  ", NULL	      },
+//	{ battery_perc,"[BAT  %s]  ", "BAT1" },
+	{ cpu_perc,    "[CPU  %s%%]  ",NULL	      },
+	{ ram_perc,    "[RAM  %s%%]  ",NULL	      },
 	{ datetime,    "%s",           "%a %d %b %T" },
 };
