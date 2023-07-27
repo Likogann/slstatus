@@ -67,19 +67,19 @@ static const struct arg args[] = {
 	/* function format          argument */
 	// Network
 	{ netspeed_rx,   " %s KiB/s  ",         "enp6s0"                                                              },
-	{ run_command,   "^c#928374^|^d^  ",     "echo NULL"                                                           },
+	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// username@host
 	{ username,      "^c#fe8019^%s",        NULL                                                                  },
 	{ hostname,      "@%s  ",                NULL                                                                  },
-	{ run_command,   "^c#928374^|^d^  ",     "echo NULL"                                                           },
+	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// Wifi & Volume
-	{ wifi_essid,    "^c#fb4934^%s  ",      "wlan0"                                                               },
+	{ wifi_essid,    "^c#fb4934^%s   ",     "wlan0"                                                               },
 	{ run_command,   "^c#8ec07c^%s  ",      "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1"   },
-	{ run_command,   "^c#928374^|^d^  ",     "echo NULL"                                                           },
+	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// CPU & RAM Usage
-	{ cpu_perc,      "^c#b8bb26^%s%%  ",    NULL                                                                  },
+	{ cpu_perc,      "^c#b8bb26^%s%%   ",   NULL                                                                  },
 	{ ram_perc,      "^c#d3869b^%s%%  ",    NULL                                                                  },
-	{ run_command,   "^c#928374^|^d^  ",     "echo NULL"                                                           },
+	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// Date & time
-	{ datetime,      "^c#ebdbb2^ %s",       "%a %d %b %H:%M:%S"                                                   }
+	{ datetime,      "^c#ebdbb2^ %s   ",    "%a %d %b %H:%M:%S"                                                   }
 };
