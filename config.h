@@ -4,7 +4,7 @@
 const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "n/a";
+static const char unknown_str[] = "Not connected";
 
 /* maximum output string length */
 #define MAXLEN 4096
@@ -81,5 +81,5 @@ static const struct arg args[] = {
 	{ ram_perc,      "^c#d3869b^%s%%  ",    NULL                                                                  },
 	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// Date & time
-	{ datetime,      "^c#ebdbb2^ %s   ",    "%a %d %b %H:%M:%S"                                                   }
+	{ datetime,      "^c#ebdbb2^ %s    ",   "%a %d %b %H:%M:%S"                                                   }
 };
