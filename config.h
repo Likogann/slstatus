@@ -66,17 +66,17 @@ static const char unknown_str[] = "Not connected";
 static const struct arg args[] = {
 	/* function format          argument */
 	// Network
-	{ netspeed_rx,   " %s KiB/s  ",         "enp6s0"                                                              },
+	{ netspeed_rx,   " %sB/s  ",         "wlo1"                                                              },
 	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// username@host
 //	{ username,      "^c#fe8019^%s",        NULL                                                                  },
 //	{ hostname,      "@%s  ",                NULL                                                                  },
-	{ wifi_essid,    "^c#fb4934^%s   ",     "enp6s0"                                                              },
+	{ wifi_essid,    "^c#fb4934^%s   ",     "wlo1"                                                              },
 	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
 	// Battery, Brightness, Volume
-//	{ battery_perc,  "^c#fe9019^%s%%  ",    "BAT0"                                                                },
-//	{ battery_remaining,"(%s)  ",            "BAT0"                                                                },
-//	{ battery_state,    "%s   ",             "BAT0"                                                                },
+	{ battery_perc,  "^c#fe9019^%s%%",    "BAT1"                                                                },
+        { battery_state,    "%s  ",            "BAT1"                                                                },
+	{ battery_remaining,"%s  ",            "BAT1"                                                                },
 
 //	{ run_command,   "^c#83a598^%s%%   ",   "echo 50"                                                             }, // ToDo: display brightness of backlight
 	{ run_command,   "^c#8ec07c^%s   ",     "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1"   },
