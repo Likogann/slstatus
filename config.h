@@ -66,21 +66,20 @@ static const char unknown_str[] = "Not connected";
 static const struct arg args[] = {
 	/* function format          argument */
 	// Network
-	{ netspeed_rx,   " %sB/s  ",         "wlo1"                                                              },
+	{ netspeed_rx,   " %sB/s  ",         "wlo1"                                                                   },
 	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
-	// username@host
-//	{ username,      "^c#fe8019^%s",        NULL                                                                  },
-//	{ hostname,      "@%s  ",                NULL                                                                  },
-	{ wifi_essid,    "^c#fb4934^%s   ",     "wlo1"                                                              },
+	{ wifi_essid,    "^c#fb4934^%s   ",     "wlo1"                                                                },
 	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
-	// Battery, Brightness, Volume
-	{ battery_perc,  "^c#fe9019^%s%%",    "BAT1"                                                                },
-        { battery_state,    "%s  ",            "BAT1"                                                                },
-	{ battery_remaining,"%s  ",            "BAT1"                                                                },
 
-//	{ run_command,   "^c#83a598^%s%%   ",   "echo 50"                                                             }, // ToDo: display brightness of backlight
+	// Battery
+	{ battery_perc,  "^c#fe9019^%s%%",    "BAT1"                                                                  },
+        { battery_state,    "%s  ",            "BAT1"                                                                  },
+	{ battery_remaining,"%s  ",            "BAT1"                                                                  },
+	// Brightness, Volume
+	{ run_command,   "^c#83a598^%s%%   ",   "echo $(( $(brightnessctl get) * 100 / 255))"                         },
 	{ run_command,   "^c#8ec07c^%s   ",     "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1"   },
 	{ run_command,   "^c#928374^|^d^   ",    "echo NULL"                                                           },
+
 	// CPU & RAM Usage
 	{ cpu_perc,      "^c#b8bb26^%s%%   ",   NULL                                                                  },
 	{ ram_perc,      "^c#d3869b^%s%%  ",    NULL                                                                  },
